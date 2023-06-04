@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 정리 예제</title>
+
+  <script>
+    function generateCaptcha() {
+      // 두 개의 랜덤한 정수 생성
+      var num1 = Math.floor(Math.random() * 10);
+      var num2 = Math.floor(Math.random() * 10);
+
+      // 문제 생성
+      var captchaQuestion = num1 + " + " + num2 + " = ?";
+      
+      // 문제와 정답 저장
+      document.getElementById("captcha-question").textContent = captchaQuestion;
+      document.getElementById("captcha-answer").value = num1 + num2;
+    }
+
+    function validateCaptcha() {
+      // 사용자가 입력한 값과 정답 비교
+      var userAnswer = parseInt(document.getElementById("user-answer").value);
+      var correctAnswer = parseInt(document.getElementById("captcha-answer").value);
+
+      if (userAnswer === correctAnswer) {
+        alert("Captcha가 성공적으로 통과되었습니다!");
+        // 여기에 폼 제출 로직 추가
+      } else {
+        alert("Captcha를 틀렸습니다. 다시 시도해주세요.");
+        generateCaptcha(); // 새로운 문제 생성
+      }
+    }
+  </script>
+
+</head>
+<body onload="generateCaptcha()">
+  <header>
+    <h1>My Personal Site</h1>
+    <h2>Coding, Music, and More</h2>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aut autem quo voluptatum enim fugit tempora voluptate nobis? Ipsam maiores dolor quam architecto, totam inventore molestiae accusantium? Quis, suscipit voluptas.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, explicabo.</p>
+    </section>
+
+    <section class="blog" id="blog">
+      <h2>Blog</h2>
+      <table>
+        <tr>
+          <th>글번호</th>
+          <th>제목</th>
+          <th>날짜</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><a href="#">웹디자인에 관해</a></td>
+          <td>2023-06-01</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="#">HTML 기본</a></td>
+          <td>2023-06-02</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="#">CSS 기본</a></td>
+          <td>2023-06-04</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <form action="#" onsubmit="event.preventDefault(); validateCaptcha();">
+        <ul>
+          <li>
+            <label>
+              이름 <input type="text" placeholder="이름을 입력하세요" />
+            </label>
+          </li>
+          <li>
+            <label>
+              이메일주소 <input type="email" placeholder="이메일을 입력하세요" />
+            </label>
+          </li>
+          <li>
+            <label>
+              메시지<textarea cols="30" rows="10" placeholder="메시지를 입력하세요"></textarea>
+            </label>
+          </li>
+        </ul>
+        <span>What is </span>
+        <span id="captcha-question"></span>
+        <input type="text" id="user-answer" required>
+        <input type="hidden" id="captcha-answer"><br>
+        <button type="submit">보내기</button>
+        <input type="reset" value="취소" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Copyright 2023</p>
+  </footer>
+</body>
+</html>
