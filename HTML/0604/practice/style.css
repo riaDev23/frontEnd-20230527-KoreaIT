@@ -1,0 +1,22 @@
+/* Transforming code into art. 🌟 */
+
+div {
+  border: 1px solid black;
+}
+
+.highlight {
+  background-color: yellow;
+  color: green;
+}
+
+#emphasis {
+  color: red;
+}
+
+#emphasis.highlight {
+  font-style: italic;
+}
+
+p {
+  color: blue;
+}

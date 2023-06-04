@@ -11,3 +11,15 @@ img {
 p {
   font-style: italic;
 }
+
+.odd {
+  color: #CF55F2;
+}
+
+#even {
+  color: #8CF56C;
+}
+
+#title {
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+/* Transforming code into art. 🌟 */
+
+p {
+  color: red;
+}
+
+h3 {
+  color: blue !important;
+}
+
+p {
+  color: hotpink;
+}
+
+/* inportant > inline > id > class > css 아래쪽 */
