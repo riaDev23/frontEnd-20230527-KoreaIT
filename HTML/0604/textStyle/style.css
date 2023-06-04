@@ -1,0 +1,42 @@
+/* Transforming code into art. 🌟 */
+
+#\31 {
+  color: red;
+}
+
+#\32 {
+  color: blue;
+
+}
+
+#\33 {
+  font: italic bold 20px sans-serif;
+  text-shadow: 2px 2px 0 gray;
+  text-align: center;
+  color: blue;
+  text-decoration: underline;
+  letter-spacing: 4px;
+}
+
+#\34 {
+  font-family: '맑은 고딕';
+}
+
+#\35 {
+  font-family: 궁서;
+}
+/*
+
+CSS 선택자에서 id 값을 사용할 때 다음 규칙을 기억해야 합니다:
+
+id 값이 숫자로 시작한다면, CSS 에스케이프(Escape) 기호 \3를 사용하여 선택자로 인식시켜야 합니다.
+숫자로 시작하는 id 값을 CSS 선택자로 직접 사용할 수 없으며, \3를 사용하여 변환한 후에야 선택자로 인식됩니다.
+예를 들어, id 값이 1인 <p> 요소에 스타일을 적용하려면 다음과 같이 CSS 선택자를 작성해야 합니다:
+
+css
+Copy code
+#\31 {
+  스타일을 적용할 내용
+}
+
+*/
