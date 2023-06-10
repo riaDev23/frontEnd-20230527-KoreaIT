@@ -1,0 +1,36 @@
+#가 {
+  font-size: xx-small;
+}
+
+#나 {
+  font-size: medium;
+}
+
+#다 {  
+font-size: xx-large;
+}
+
+#라의상위요소 {
+  font-size: 20px;
+}
+
+#라 {
+  font-size: 2em;
+}
+
+#마 {
+  font-size: 16px;
+  /* font-style: italic; */
+}
+
+#바 {
+  font-weight: bolder;
+}
+
+#사 {
+  font-weight: 100;
+}
+
+#아 {
+  text-align: justify;
+}
