@@ -11,9 +11,14 @@
     <p id="paragraph">위 텍스트를 클릭해주세요 ~ ! 😄</p>
     <button id="confirmBtn">confirm</button>
     <button id="promptBtn">prompt</button>
-    
+
     <script>
-      document.write('<p>document.write로 작성된 문장입니다.</p>')
+      document.write("<p>document.write로 작성된 문장입니다.</p>");
+      let name = prompt("이름을 입력해주세요");
+      document.write(name + "님, 반갑습니다.");
+
+      let name2 = prompt("전화번호를 입력해주세요");
+      console.log("전화번호 : ", name2)
     </script>
   </body>
 </html>

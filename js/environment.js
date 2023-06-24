@@ -13,3 +13,4 @@ confirmBtn.onclick = function () {
 promptBtn.onclick = function () {
   console.log(prompt("입력해주세요"));
 };
+
