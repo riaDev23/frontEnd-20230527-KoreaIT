@@ -7,6 +7,7 @@ import Const from "./components/Const";
 import DataType from "./components/DataType";
 import Operator from "./components/Operator";
 import Practice0624 from "./components/Practice0624";
+import Condition from "./components/Condition";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           <li>
             <Link to="/Practice0624">연습문제</Link>
           </li>
+          <li>
+            <Link to="/Condition">condition</Link>
+          </li>
         </ol>
         <Routes>
           <Route path="/Variable_constant" element={<VariableConstant />} />
@@ -41,6 +45,9 @@ function App() {
           <Route path="/DataType" element={<DataType />} />
           <Route path="/Operator" element={<Operator />} />
           <Route path="/Practice0624" element={<Practice0624 />} />
+          <Route path="/Condition" element={<Condition />} />
+          {/* <Route path="/Practice0624" element={<Practice0624 />} /> */}
+          {/* <Route path="/Practice0624" element={<Practice0624 />} /> */}
         </Routes>
       </Router>
     </div>
