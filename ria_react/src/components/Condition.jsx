@@ -129,8 +129,8 @@ true || true == true;
 let num1 = prompt('num1 : 숫자를 입력하세요');
 let num2 = prompt('num2 : 숫자를 입력하세요');
 
-if(num1 || num2) {
-  alert(`${num1 || num2}`)
+if(num1 < 10 || num2 < 10) {
+  alert(`num1, num2 중에서 10 최소 1개는 10 미만`)
 } else {
   alert('num1, num2 중에서 10 미만인 수가 없습니다.')
 }
