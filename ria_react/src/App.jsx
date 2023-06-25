@@ -9,6 +9,8 @@ import Operator from "./components/Operator";
 import Practice0624 from "./components/Practice0624";
 import Condition from "./components/Condition";
 import ConditionPractice from "./components/ConditionPractice";
+import Loop from "./components/Loop";
+import ConditionLoop from "./components/ConditionLoop";
 
 function App() {
   return (
@@ -41,6 +43,12 @@ function App() {
           <li>
             <Link to="/ConditionPractice">condition_practice</Link>
           </li>
+          <li>
+            <Link to="/Loop">Loop</Link>
+          </li>
+          <li>
+            <Link to="/ConditionLoop">ConditionLoop</Link>
+          </li>
         </ol>
         <Routes>
           <Route path="/Variable_constant" element={<VariableConstant />} />
@@ -51,8 +59,8 @@ function App() {
           <Route path="/Practice0624" element={<Practice0624 />} />
           <Route path="/Condition" element={<Condition />} />
           <Route path="/ConditionPractice" element={<ConditionPractice />} />
-          {/* <Route path="/Practice0624" element={<Practice0624 />} /> */}
-          {/* <Route path="/Practice0624" element={<Practice0624 />} /> */}
+          <Route path="/Loop" element={<Loop />} />
+          <Route path="/ConditionLoop" element={<ConditionLoop />} />
           {/* <Route path="/Practice0624" element={<Practice0624 />} /> */}
           {/* <Route path="/Practice0624" element={<Practice0624 />} /> */}
         </Routes>

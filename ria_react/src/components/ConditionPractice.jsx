@@ -97,8 +97,7 @@ const handleScript = {
         alert("I don't know about that job");
     }
   },
-  
-  
+
   /*
   ? 삼항 연산자
   * 조건에 따른 변수 값 할당
@@ -108,13 +107,12 @@ const handleScript = {
   */
 
   문제6: () => {
-    let isRainingCondition = true
-    let activity = '';
-    isRainingCondition ?  activity = "Stay home and read a book" : activity = "Go for a walk"
+    let isRainingCondition = true;
+    let activity = isRainingCondition
+      ? "Stay home and read a book"
+      : "Go for a walk";
     console.log(activity);
-  }
-
-
+  },
 };
 const ConditionPractice = () => {
   return (
