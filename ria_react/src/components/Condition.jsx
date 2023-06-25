@@ -104,6 +104,48 @@ if-else문을 더 간결하게 표현
 * 조건 ? 표현식1(조건이참) : 표현식2(조건이거짓)
 ? 조건이 true면 표현식1 실행, false면 표현식2 실행
 */
+let numCondition = 10;
+let message = numCondition > 10 ? "The number is greater than 10" : "The number is less than or equal to 10";
+console.log(message);
+
+// ? 퀴즈~~ 😀
+// true ? alert('출력A') : alert('출력B');
+// false ? alert('출력B') : alert('출력A');
+// true || alert('출력A');
+// true && alert('출력B');
+
+/* 논리 연산자로 조건체크
+조건을 2개 이상 체크할 경우에는 조건 연산자를 사용해서 조건식을 만든다.
+두 조건이 true일 경우 1개만 true일 경우처럼 여러 경우의 수를 따질 때는 논리 연산자를 사용
+
+? OR 연산자
+? 피연산자 2개 중에서 true가 하나라도 있으면 결과값은 true
+false || false == false;
+false || true == true;
+true || false == true;
+true || true == true;
+*/
+
+let num1 = prompt('num1 : 숫자를 입력하세요');
+let num2 = prompt('num2 : 숫자를 입력하세요');
+
+if(num1 || num2) {
+  alert(`${num1 || num2}`)
+} else {
+  alert('num1, num2 중에서 10 미만인 수가 없습니다.')
+}
+
+/*
+? AND 연산자
+? 피연산자 2개 중에서 false가 하나라도 있으면 false
+false && false == false;
+false && true == false;
+true && false == false;
+true && true == true;
+*/
+let numTest = 0;
+console.log(`numTest는 true?? ${numTest==true}`)
+
 
 const Condition = () => {
   return <div>Condition</div>;
