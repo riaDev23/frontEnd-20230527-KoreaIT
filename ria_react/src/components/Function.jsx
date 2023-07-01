@@ -51,6 +51,52 @@ let add = numbers.map((x) => x + x);
 
 console.log(add);
 
+/* 콜백예제 */
+
+const callThreeTimes = () => {
+  const arr = [];
+  for (let i = 0; i < 3; i++) {
+    arr.push(`${i + 1}번째 함수 호출`);
+  }
+  return arr;
+};
+
+const numberArray = [0, 1, 2, 3, 4, 5];
+const evenNumbers = numberArray.filter((value) => value % 2 === 0);
+
+console.log(evenNumbers);
+
+function makeCounter() {
+  let counter = 0;
+  return () => counter++;
+}
+
+let count = makeCounter();
+
+console.log(`카운트: ${count()}`);
+console.log(`카운트: ${count()}`);
+console.log(`카운트: ${count()}`);
+console.log(`카운트: ${count()}`);
+console.log(`카운트: ${count()}`);
+console.log(`카운트: ${count()}`);
+console.log(`카운트: ${count()}`);
+console.log(`카운트: ${count()}`);
+
+/* 재귀함수 */
+/* 자신을 다시 호출하는 함수 */
+/* 예제 */
+// n! = n * (n-1) * (n-2) . . . .
+
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+console.log(factorial(5));
+
 const Function = () => {
   return (
     <div>
@@ -71,7 +117,10 @@ const Function = () => {
       <p>{greet3()}</p>
       <p>{square(2)}</p>
       <p>{add}</p>
-      <h4>함수2</h4>
+      <h4>콜백함수</h4>
+      {callThreeTimes().map((item, index) => (
+        <p key={index}>{item}</p>
+      ))}
     </div>
   );
 };

@@ -12,6 +12,8 @@ import ConditionPractice from "./components/ConditionPractice";
 import Loop from "./components/Loop";
 import ConditionLoop from "./components/ConditionLoop";
 import Function from "./components/Function";
+import FunctionPractice from "./components/FunctionPractice";
+import Event from "./components/Event";
 
 function App() {
   return (
@@ -53,6 +55,12 @@ function App() {
           <li>
             <Link to="/Function">Function</Link>
           </li>
+          <li>
+            <Link to="/FunctionPractice">FunctionPractice</Link>
+          </li>
+          <li>
+            <Link to="/Event">Event</Link>
+          </li>
         </ol>
         <Routes>
           <Route path="/Variable_constant" element={<VariableConstant />} />
@@ -65,8 +73,9 @@ function App() {
           <Route path="/ConditionPractice" element={<ConditionPractice />} />
           <Route path="/Loop" element={<Loop />} />
           <Route path="/ConditionLoop" element={<ConditionLoop />} />
-          {<Route path="/Function" element={<Function />} />}
-          {/* <Route path="/Practice0624" element={<Practice0624 />} /> */}
+          <Route path="/Function" element={<Function />} />
+          <Route path="/FunctionPractice" element={<FunctionPractice />} />
+          <Route path="/Event" element={<Event />} />
         </Routes>
       </Router>
     </div>
