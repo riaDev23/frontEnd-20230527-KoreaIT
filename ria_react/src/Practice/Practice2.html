@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Stock Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      border: none;
+      outline: none;
+    }
+    input {
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 5px auto;
+      height: 30px;
+    }
+
+    table {
+      border-spacing: 0;
+    }
+    th,
+    td {
+      border-bottom: 1px solid gray;
+      width: 200px;
+    }
+
+    .submit {
+      width: 170px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 사용자는 주식의 이름, 매수가, 주식 수량을 입력할 수 있어야 합니다
+  사용자가 '추가' 버튼을  클릭하면, 주식 정보가 표에 추가되어야 합니다
+  표에 추가된 각 주식 정보 옆에는 해당 정보를 표에서 제거하는 삭제 버튼이 있어야 합니다
+  모든 주식 정보는 페이지를 새로 고침 하더라도 유지되어야 합니다
+  이를 위해 localStorage를 사용할 수 있습니다 -->
+
+  <form>
+    <p>주식이름</p><input type="text" class="name" placeholder="Stock Name"><br />
+    <p>매수가</p><input type="number" class="price" placeholder="Purchase Price"><br />
+    <p>수량</p><input type="number" class="qty" placeholder="Quantity"><br />
+    <input type="submit" class="submit" value="추가">
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>NO</th>
+        <th>주식이름</th>
+        <th>매수가</th>
+        <th>수량</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="./stocks.js"></script>
+</body>
+</html>

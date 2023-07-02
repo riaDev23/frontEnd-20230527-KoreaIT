@@ -14,6 +14,10 @@ import ConditionLoop from "./components/ConditionLoop";
 import Function from "./components/Function";
 import FunctionPractice from "./components/FunctionPractice";
 import Event from "./components/Event";
+import Array from "./components/Array";
+import Object from "./components/Object";
+import Object2 from "./components/Object2";
+import DOM from "./components/DOM";
 
 function App() {
   return (
@@ -61,6 +65,18 @@ function App() {
           <li>
             <Link to="/Event">Event</Link>
           </li>
+          <li>
+            <Link to="/Array">Array</Link>
+          </li>
+          <li>
+            <Link to="/Object">Object</Link>
+          </li>
+          <li>
+            <Link to="/Object2">Object2</Link>
+          </li>
+          <li>
+            <Link to="/DOM">DOM</Link>
+          </li>
         </ol>
         <Routes>
           <Route path="/Variable_constant" element={<VariableConstant />} />
@@ -76,6 +92,10 @@ function App() {
           <Route path="/Function" element={<Function />} />
           <Route path="/FunctionPractice" element={<FunctionPractice />} />
           <Route path="/Event" element={<Event />} />
+          <Route path="/Array" element={<Array />} />
+          <Route path="/Object" element={<Object />} />
+          <Route path="/Object2" element={<Object2 />} />
+          <Route path="/DOM" element={<DOM />} />
         </Routes>
       </Router>
     </div>

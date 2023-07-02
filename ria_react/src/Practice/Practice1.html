@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #slider {
+        display: flex;
+        align-items: center;
+      }
+
+      #slideContainer {
+        display: flex;
+        overflow: hidden;
+        width: 300px;
+      }
+
+      .slide {
+        min-width: 100%;
+        height: auto;
+        transition: transform .3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slider">
+      <button class="prevBtn">이전</button>
+      <div class="img" id="slideContainer">
+        <img class="slide" src="./images/1.jpg" alt=""/>
+        <img class="slide" src="./images/2.jpg" alt=""/>
+        <img class="slide" src="./images/3.jpg" alt=""/>
+      </div>
+      <button class="nextBtn">다음</button>
+    </div>
+    <script src="practice1.js"></script>
+  </body>
+</html>
