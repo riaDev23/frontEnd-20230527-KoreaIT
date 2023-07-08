@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const DOM = () => {
   // DOM
@@ -17,10 +17,24 @@ const DOM = () => {
   heading.textContent = "하이하이";
   heading.InnerHTML = "하이하이";
 
+  useEffect(() => {
+    const rects = document.querySelectorAll(".rect");
+
+    rects.forEach((rect, index) => {
+      const width = (index + 1) * 100;
+      const src = `https://picsum.photos/${width}/250`;
+      rect.setAttribute("src", src);
+    });
+  }, []);
+
   return (
     <div>
       <h1>DOM</h1>
       <div className="myHeading">asd</div>
+      <img className="rect" />
+      <img className="rect" />
+      <img className="rect" />
+      <img className="rect" />
     </div>
   );
 };

@@ -18,6 +18,9 @@ import Array from "./components/Array";
 import Object from "./components/Object";
 import Object2 from "./components/Object2";
 import DOM from "./components/DOM";
+import ObjectArray from "./components/ObjectArray";
+import EventPractice from "./components/EventPractice";
+import DropDown from "./components/DropDown";
 
 function App() {
   return (
@@ -77,6 +80,15 @@ function App() {
           <li>
             <Link to="/DOM">DOM</Link>
           </li>
+          <li>
+            <Link to="/ObjectArray">ObjectArray</Link>
+          </li>
+          <li>
+            <Link to="/EventPractice">EventPractice</Link>
+          </li>
+          <li>
+            <Link to="/DropDown">DropDown</Link>
+          </li>
         </ol>
         <Routes>
           <Route path="/Variable_constant" element={<VariableConstant />} />
@@ -96,6 +108,9 @@ function App() {
           <Route path="/Object" element={<Object />} />
           <Route path="/Object2" element={<Object2 />} />
           <Route path="/DOM" element={<DOM />} />
+          <Route path="/ObjectArray" element={<ObjectArray />} />
+          <Route path="/EventPractice" element={<EventPractice />} />
+          <Route path="/DropDown" element={<DropDown />} />
         </Routes>
       </Router>
     </div>

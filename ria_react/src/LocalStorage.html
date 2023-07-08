@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage 객체</title>
+  </head>
+  <body>
+    <p></p>
+    <button value="지우기">지우기</button>
+    <input type="text" />
+    <script>
+      const p = document.querySelector("p");
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
+      const savedValue = localStorage.getItem("input");
+
+      console.log(savedValue);
+      if (savedValue) {
+        input.value = savedValue;
+        p.textContent = `이전 실행의 마지막 값: ${savedValue}`;
+      }
+
+      input.addEventListener("keyup", (e) => {
+        const value = e.currentTarget.value;
+        localStorage.setItem("input", value);
+      });
+
+      button.addEventListener("click", (e) => {
+        localStorage.clear();
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

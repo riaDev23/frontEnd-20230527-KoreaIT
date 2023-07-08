@@ -27,4 +27,5 @@ for (let i = 0; i < 3; i++) {
   ul.insertBefore(li, ul.firstChild);
 }
 
-ul.addEventListener('')
+ul.addEventListener("");
+

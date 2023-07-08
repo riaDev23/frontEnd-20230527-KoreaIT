@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div id="하이하이"></div>
-  <div class="item">1</div>
-  <div class="item">2</div>
-  <div class="item">3</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="하이하이"></div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
 
-  <ul>
-    <li>ggg</li>
-  </ul>
-</body>
+    <ul>
+      <li>ggg</li>
+    </ul>
+
+    <img class="rect" />
+    <img class="rect" />
+    <img class="rect" />
+    <img class="rect" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rects = document.querySelectorAll(".rect");
+
+        rects.forEach((rect, index) => {
+          const width = (index + 1) * 100;
+          const src = `https://picsum.photos/${width}/250`;
+          rect.setAttribute("src", src);
+        });
+      });
+
+      let [a, b] = [1, 2];
+      console.log(a, b);
+      [a, b] = [b, a];
+      console.log([2, 1]);
+      console.log(a, b);
+    </script>
+  </body>
 </html>
