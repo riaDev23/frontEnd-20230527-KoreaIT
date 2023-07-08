@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단위변환</title>
+  </head>
+  <body>
+    <input type="text" /> cm =
+    <span></span>
+    <select name="" id="">
+      <option value="10">mm</option>
+      <option value="0.01">m</option>
+      <option value="0.393701">inch</option>
+    </select>
+
+    <script>
+      // 단위변환 프로그램
+      // 웹페이지에 select태그와 input 태그를 사용하여 사용자로부터 값을 받고
+      // 이를 특정한 상수(option의 value)와 곱한 후, 결과를 span 태그에 표시
+
+      document.addEventListener("DOMContentLoaded", () => {});
+
+      const select = document.querySelector("select");
+      const option = document.querySelector("option");
+      const span = document.querySelector("span");
+
+      // calcluate 함수 생성: 현재값과 특정상수를 곱한 결과를 계산
+      // 이를 소수점 둘째자리 까지 반올림하여 span 태그의 텍스트로 설정
+      // toFixed()
+
+      // select태그에 change이벤트리스너 추가
+      // select요소의 선택옵션이 변경될때마다 실행
+      // 선택 옵션의 값을 상수에 설정, calculate 함수를 호출
+
+      // input 태그에 'keyup' 이벤트 리스너 추가
+      // 사용자가 키를 눌렀다 놓을 때마다 이벤트가 발생하며
+      // 입력된 값을 현재값에 설정하고 calculate 함수를호출
+    </script>
+  </body>
+</html>
